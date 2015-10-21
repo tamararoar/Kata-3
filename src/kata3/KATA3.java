@@ -13,7 +13,17 @@ public class KATA3 {
 
     
     public static void main(String[] args) {
-        HistogramDisplay histogram = new HistogramDisplay();
+        
+        Histogram<String> histograma = new Histogram<>();
+        histograma.increment("gmail");
+        histograma.increment("gmail");
+        histograma.increment("ulpgc");
+        histograma.increment("ulpgc");
+        histograma.increment("hotmail");
+        histograma.increment("hotmail");
+        
+       HistogramDisplay histogram = new HistogramDisplay(histograma);
+        
         histogram.execute();
         
     }
